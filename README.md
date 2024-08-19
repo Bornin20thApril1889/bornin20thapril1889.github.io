@@ -1,32 +1,42 @@
 # bornin20thapril1889.github.io
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Webpage</title>
+    <title>Complex Intro Page (HTML Only)</title>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Simple Webpage</h1>
+        <h1>Welcome to My Complex Page</h1>
+        <hr>
+        <p>A captivating introduction using only HTML.</p>
     </header>
-    <main>
-        <section>
-            <p>This is a paragraph that gives a brief introduction to the webpage. Here, you can include information about yourself or the purpose of the page.</p>
-        </section>
-        <section>
-            <h2>Things I Like:</h2>
-            <ul>
-                <li>Coding</li>
-                <li>Design</li>
-                <li>Reading Books</li>
-                <li>Traveling</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>© 2023 My Simple Webpage</p>
-    </footer>
+
+    <section>
+        <h2>About Me</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <hr>
+    </section>
+
+    <section>
+        <h2>My Interests</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Web Development</li>
+            <li>Problem Solving</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Contact</h2>
+        <p>
+            <strong>Email:</strong> your_email@example.com<br>
+            <strong>Phone:</strong> 123-456-7890<br>
+            <strong>Address:</strong> 123 Main St, City, State, ZIP
+        </p>
+    </section>
 </body>
 </html>
