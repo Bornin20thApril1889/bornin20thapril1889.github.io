@@ -1,4 +1,4 @@
-<fishermans-haul-website.html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <title>Fisherman's Haul - Gourmet Seafood Takeaway</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-        
+
         :root {
             --primary-color: #00648f;
             --secondary-color: #00a8e8;
@@ -14,20 +14,20 @@
             --background-color: #f0f8ff;
             --text-color: #333;
         }
-        
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--background-color);
             color: var(--text-color);
             line-height: 1.6;
         }
-        
+
         header {
             background-color: var(--primary-color);
             color: white;
@@ -36,7 +36,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         header::before {
             content: "";
             position: absolute;
@@ -49,19 +49,19 @@
             opacity: 0.1;
             animation: wave 10s infinite linear;
         }
-        
+
         @keyframes wave {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-        
+
         h1 {
             font-size: 2.5em;
             margin-bottom: 0.5em;
             position: relative;
             z-index: 1;
         }
-        
+
         nav {
             background-color: var(--secondary-color);
             padding: 0.5em;
@@ -71,7 +71,7 @@
             top: 0;
             z-index: 100;
         }
-        
+
         nav button {
             background-color: transparent;
             border: none;
@@ -88,22 +88,22 @@
             transition: background-color 0.3s ease;
             border-radius: 5px;
         }
-        
+
         nav button:hover {
             background-color: rgba(255, 255, 255, 0.2);
             border-radius: 5px;
         }
 
-        .order-container { /* New container for centering */
-            display: flex;                          /* Use flexbox */
-            justify-content: center;                /* Center content horizontally */
-            align-items: center;                    /* Center items vertically */
-            margin-top: 1em;                       /* Space above the container */
-            padding: 1em;                          /* Add padding around the container */
-            border: 1px solid var(--accent-color); /* Border around the container */
-            border-radius: 10px;                   /* Rounded corners for the container */
-            background-color: rgba(255, 255, 255, 0.8); /* Background for better visibility */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+        .order-container {
+            display: flex;                          
+            justify-content: center;                
+            align-items: center;                    
+            margin-top: 1em;                       
+            padding: 1em;                          
+            border: 1px solid var(--accent-color); 
+            border-radius: 10px;                   
+            background-color: rgba(255, 255, 255, 0.8); 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
         }
 
         #order-now {
@@ -126,7 +126,7 @@
         #order-now:active {
             transform: translateY(0); /* Reset on click */
         }
-        
+
         .page {
             display: none;
             padding: 20px;
@@ -135,7 +135,7 @@
             opacity: 0;
             transition: opacity 0.5s ease;
         }
-        
+
         .active {
             display: block;
             opacity: 1;
@@ -219,8 +219,7 @@
         #checkout:hover {
             background-color: #d48f00;
         }
-        
-        /* New styles for checkout page */
+
         #checkout-form {
             max-width: 500px;
             margin: 0 auto;
@@ -229,24 +228,24 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
+
         #checkout-form h2 {
             margin-bottom: 20px;
         }
-        
+
         #checkout-form label {
             display: block;
             margin-bottom: 5px;
         }
-        
-        #checkout-form input {
+
+        #checkout-form input, #checkout-form textarea {
             width: 100%;
             padding: 8px;
             margin-bottom: 15px;
             border: 1px solid #ddd;
             border-radius: 4px;
         }
-        
+
         #checkout-form button {
             background-color: var(--accent-color);
             color: white;
@@ -258,7 +257,7 @@
             display: block;
             width: 100%;
         }
-        
+
         #checkout-form button:hover {
             background-color: #d48f00;
         }
@@ -273,39 +272,113 @@
             font-size: 2em;
             text-align: center;
         }
-        
+
         #contact h3 {
             font-size: 1em;
-            margin-left: 340px;
         }
 
         #contact h2 {
             font-size: 1.7em;
-            margin-left: 340px;
         }
 
-        /* Styles for featured seafood */
+        #Reviews h3 {
+            font-size: 1em;
+            text-align: center; /* Centered */
+        }
+
+        #Reviews h2 {
+            font-size: 1.7em;
+            text-align: center; /* Centered */
+        }
+
+        #review-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #review-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .stars {
+            display: flex;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .star {
+            font-size: 24px;
+            color: #e3e3e3; 
+        }
+
+        .star.selected {
+            color: #f6a604; 
+        }
+
         .featured-seafood {
             display: grid; 
-            grid-template-columns: repeat(2, 1fr); /* Two items per row */
-            gap: 20px; /* Space between items */
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
             margin-top: 20px;
         }
 
         .seafood-item {
-            background-color: white;        /* background for contrast */
+            background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             padding: 15px;
-            text-align: center;             /* center align text */
+            text-align: center;
         }
 
         .seafood-item img {
-            width: 100%;                   /* responsive image */
-            height: auto;                 /* maintain aspect ratio */
+            width: 100%;
+            height: auto;
             border-radius: 5px;
-            margin-bottom: 10px;          /* space below image */
+            margin-bottom: 10px;
         }
+
+        #Reviews {
+            background-color: #2d9394; /* Darker background for the reviews section */
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        /* Review styles */
+        .review {
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white for reviews */
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+        }
+
+        .review img {
+            width: 40px; /* User icon size */
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .review h4 {
+            margin: 0;
+            color: #56626b;
+        }
+
+        .review p {
+            margin: 5px 0;
+            color: #56626b;
+        }
+
     </style>
 </head>
 <body>
@@ -317,12 +390,13 @@
         <button onclick="showPage('intro')">Home</button>
         <button onclick="showPage('menu')">Menu</button>
         <button onclick="showPage('contact')">Contact</button>
+        <button onclick="showPage('Reviews')">Reviews</button>
     </nav>
     
     <div id="intro" class="page active">
         <h2>Welcome to Fisherman's Haul</h2>
         <img src="seafood_bg.jpg" alt="Seafood Background" style="width: 100%; max-height: 400px; object-fit: cover;">
-        <div class="order-container"> <!-- New container for centering -->
+        <div class="order-container">
             <button id="order-now" onclick="showPage('menu')">Order Now</button>  
         </div>
         <p>Dive into a sea of flavors with our gourmet seafood takeaway. We bring the ocean's bounty straight to your plate, offering the freshest catch prepared with culinary expertise.</p>
@@ -369,34 +443,43 @@
             <img src="gallery3.jpg" alt="Fresh Salmon">
             <div class="menu-item-details">
                 <h3>Fresh Salmon</h3>
-                <p>Fresh salmon fillet, grilled to perfection and served with a lemon-dill sauce or cooked with chips.</p>
+                <p>Fresh salmon fillet, raw and fresh or can be grilled to perfection served with a lemon-dill sauce.</p>
                 <p>Price: $11.99</p>
             </div>
             <button class="add-to-cart" onclick="addToCart('Fresh Salmon', 11.99)">Add to Cart</button>
-        </div>
-        <div class="menu-item">
-            <img src="gourmet-seafood-platter.jpg" alt="Gourmet Seafood Platter">
-            <div class="menu-item-details">
-                <h3>Gourmet Seafood Platter</h3>
-                <p>A assortment of grilled seafood and calamari served with a sauces of choose.</p>
-                <p>Price: $25.99</p>
-            </div>
-            <button class="add-to-cart" onclick="addToCart('Gourmet Seafood Platter', 25.99)">Add to Cart</button>
         </div>
         <div class="menu-item">
             <img src="gallery5.jpg" alt="Barramundi">
             <div class="menu-item-details">
                 <h3>Barramundi</h3>
                 <p>Fresh raw Barramundi from the ocean.</p>
-                <p>Price: $20.00</p>
+                <p>Price: $20.99</p>
             </div>
-            <button class="add-to-cart" onclick="addToCart('Barramundi', 20.00)">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart('Barramundi', 20.99)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="gallery17.jpg" alt="Fresh cod">
+            <div class="menu-item-details">
+                <h3>Fresh cod</h3>
+                <p>Fresh raw cod from the ocean.</p>
+                <p>Price: $15.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart('Fresh cod', 15.99)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="gourmet-seafood-platter.jpg" alt="Gourmet Seafood Platter">
+            <div class="menu-item-details">
+                <h3>Gourmet Seafood Platter</h3>
+                <p>An assortment of grilled seafood and calamari served with sauces of your choice.</p>
+                <p>Price: $25.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart('Gourmet Seafood Platter', 25.99)">Add to Cart</button>
         </div>
         <div class="menu-item">
             <img src="gallery2.jpg" alt="Fish Burger">
             <div class="menu-item-details">
                 <h3>Fish Burger</h3>
-                <p>Grilled fish burger with tarter sauces.</p>
+                <p>Grilled fish burger with tartar sauce.</p>
                 <p>Price: $15.99</p>
             </div>
             <button class="add-to-cart" onclick="addToCart('Fish Burger', 15.99)">Add to Cart</button>
@@ -428,7 +511,7 @@
                 <p>A Refreshing Drink</p>
                 <p>Price: $5.50</p>
             </div>
-            <button class="add-to-cart" onclick="addToCart('Coca Cola', 5.50)">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart('Coca Cola 500ml', 5.50)">Add to Cart</button>
         </div>
         <div class="menu-item">
             <img src="gallery7.jpg" alt="Kirks Creaming Soda 375ml">
@@ -437,7 +520,7 @@
                 <p>A Refreshing Drink</p>
                 <p>Price: $2.70</p>
             </div>
-            <button class="add-to-cart" onclick="addToCart('Kirks Creaming Soda', 2.70)">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart('Kirks Creaming Soda 375ml', 2.70)">Add to Cart</button>
         </div>
         <div class="menu-item">
             <img src="gallery8.jpg" alt="Kirks Lemonade 375ml">
@@ -446,7 +529,7 @@
                 <p>A Refreshing Drink</p>
                 <p>Price: $2.70</p>
             </div>
-            <button class="add-to-cart" onclick="addToCart('Kirks Lemonade', 2.70)">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart('Kirks Lemonade 375ml', 2.70)">Add to Cart</button>
         </div>
         <div class="menu-item">
             <img src="gallery11.jpg" alt="Fanta 600ml">
@@ -455,7 +538,7 @@
                 <p>A Refreshing Drink</p>
                 <p>Price: $5.90</p>
             </div>
-            <button class="add-to-cart" onclick="addToCart('Fanta', 5.90)">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart('Fanta 600ml', 5.90)">Add to Cart</button>
         </div>
         <div class="menu-item">
             <img src="gallery12.jpg" alt="Pepsi 375ml">
@@ -464,15 +547,23 @@
                 <p>A Refreshing Drink</p>
                 <p>Price: $2.70</p>
             </div>
-            <button class="add-to-cart" onclick="addToCart('Pepsi', 2.70)">Add to Cart</button>
+            <button class="add-to-cart" onclick="addToCart('Pepsi 375ml', 2.70)">Add to Cart</button>
         </div>
-
+        <div class="menu-item">
+            <img src="gallery15.jpg" alt="Sunkist 375ml">
+            <div class="menu-item-details">
+                <h3>Sunkist 375ml</h3>
+                <p>A Refreshing Drink</p>
+                <p>Price: $2.70</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart('Sunkist 375ml', 2.70)">Add to Cart</button>
+        </div>
         <h2>Extras</h2>
         <div class="menu-item">
             <img src="gallery9.jpg" alt="Whole Lemon">
             <div class="menu-item-details">
                 <h3>Whole Lemon</h3>
-                <p>A Refreshing Drink</p>
+                <p>Adds a sour taste to your meal</p>
                 <p>Price: $0.70</p>
             </div>
             <button class="add-to-cart" onclick="addToCart('Whole Lemon', 0.70)">Add to Cart</button>
@@ -481,14 +572,22 @@
             <img src="gallery14.jpg" alt="Salt and Pepper">
             <div class="menu-item-details">
                 <h3>Salt and Pepper</h3>
-                <p>It's free</p>
-                <p>Price: $0.00</p>
+                <p>Add some extra spice to your order</p>
+                <p>Price: Free</p>
             </div>
             <button class="add-to-cart" onclick="addToCart('Salt and Pepper', 0.00)">Add to Cart</button>
         </div>
-    
+        <div class="menu-item">
+            <img src="gallery16.jpg" alt="Tartar Sauces">
+            <div class="menu-item-details">
+                <h3>Small Tartar Sauce Packets</h3>
+                <p>Add extra sauces to the order</p>
+                <p>Price: $0.20</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart('Tartar Sauces', 0.20)">Add to Cart</button>
+        </div>
     </div>
-    
+
     <div id="contact" class="page">
         <h2>Contact Us</h2>
         <h3>Ready to embark on a culinary journey? Place your order now!</h3>
@@ -498,7 +597,34 @@
         <h3>Saturday - Sunday: 12:00 PM - 10:00 PM</h3>
         <h3>Location: 18 Chapple St, Gympie QLD 4570</h3>
     </div>
-    
+
+    <div id="Reviews" class="page">
+        <h2>Reviews</h2>
+        <h3>Tell Us How We Went</h3>
+
+        <div id="review-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="rating">Rating:</label>
+            <div class="stars" id="rating">
+                <span class="star" onclick="selectStar(1)">&#9733;</span>
+                <span class="star" onclick="selectStar(2)">&#9733;</span>
+                <span class="star" onclick="selectStar(3)">&#9733;</span>
+                <span class="star" onclick="selectStar(4)">&#9733;</span>
+                <span class="star" onclick="selectStar(5)">&#9733;</span>
+            </div>
+
+            <label for="comment">Comment:</label>
+            <textarea id="comment" required></textarea>
+
+            <button id="submit-review" onclick="submitReview()">Submit Review</button>
+        </div>
+
+        <h3>Existing Reviews:</h3>
+        <div id="review-list"></div>
+    </div>
+
     <div id="checkout-page" class="page">
         <form id="checkout-form">
             <h2>Checkout</h2>
@@ -522,13 +648,17 @@
 
     <script>
         let cart = [];
-
+        let selectedRating = 0; 
+        
         function showPage(pageId) {
             const pages = document.getElementsByClassName('page');
             for (let page of pages) {
                 page.classList.remove('active');
             }
             document.getElementById(pageId).classList.add('active');
+            if (pageId === 'Reviews') {
+                displayReviews();
+            }
         }
 
         function addToCart(item, price) {
@@ -595,6 +725,60 @@
             updateCart();
             showPage('intro');
         });
+
+        // Review submission and display
+        function submitReview() {
+            const name = document.getElementById('name').value;
+            const comment = document.getElementById('comment').value;
+            const rating = selectedRating;
+            const date = new Date().toLocaleDateString();
+            
+            const review = { name, rating, comment, date };
+            let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+            reviews.push(review);
+            localStorage.setItem('reviews', JSON.stringify(reviews));
+            displayReviews();
+            clearReviewFields();
+        }
+
+        function clearReviewFields() {
+            document.getElementById('name').value = '';
+            selectedRating = 0;
+            document.querySelectorAll('.star').forEach(star => star.classList.remove('selected'));
+            document.getElementById('comment').value = '';
+        }
+
+        function selectStar(rating) {
+            selectedRating = rating; // Save the selected rating
+            document.querySelectorAll('.star').forEach((star, index) => {
+                star.classList.toggle('selected', index < rating);
+            });
+        }
+
+        function displayReviews() {
+            const reviewList = document.getElementById('review-list');
+            reviewList.innerHTML = '';
+            const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+
+            reviews.forEach(review => {
+                const reviewDiv = document.createElement('div');
+                reviewDiv.className = 'review';
+                reviewDiv.innerHTML = `
+                    <img src="user-icon.png" alt="User Icon">
+                    <div>
+                        <h4>${review.name} ${'⭐'.repeat(review.rating)}</h4>
+                        <p>${review.comment}</p>
+                        <p><small>${review.date}</small></p>
+                    </div>
+                `;
+                reviewList.appendChild(reviewDiv);
+            });
+        }
+
+        // Load existing reviews when page is loaded
+        window.onload = function() {
+            displayReviews();
+        };
     </script>
 </body>
 </html>
